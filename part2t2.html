@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>part2 t2</title>
+</head>
+<body>
+    <script>
+        var contacts = [
+            {
+                name: "kareem",
+                phone: "123456789"
+            }
+        ]
+
+
+        function add(){
+            var book ={};
+            book.name= prompt("please enter the name :");
+            book.phone = prompt("please enter the number :");
+            contacts.push(book);
+        }
+        function search(){
+            var keyword = prompt("enter name or phone number :");
+            for(var i=0 ; i<contacts.length; i++){
+                var current = contacts[i];
+                if(keyword == current.name || keyword == current.phone){
+                    alert(" Name : "+ current.name +"   Phone Number :"+ current.phone);
+                }
+            }
+        }
+        var op = prompt("enter the operation :");
+        if (op == "add"){
+            add();
+        }else if (op == "search"){
+            search();
+        }
+
+
+        
+    </script>
+</body>
+</html>
