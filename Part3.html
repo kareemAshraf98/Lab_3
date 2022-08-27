@@ -74,6 +74,27 @@
 
         //adds one or more elements to the beginning of an array and returns the new length of the array and returns the length of new array
         unshift()
+
+
+
+
+        //Ex3: Write a nested function and explain the closure -> lexical environment
+
+        /*  define a parent function named “addNum()”, 
+        which has two parameters, “x” and “y”. After doing so,
+        we will create a child function “showMessage()” which prints out a text message to the console Log
+        */
+        function addNum(x,y)
+        {
+            //nested function
+            function showMessage(text)
+            {
+                console.log(text);
+            }
+            let sum=x+y;
+            //invoking the nested function
+            showMessage("sum is "+ sum)
+        }
     </script>
 </body>
 </html>
